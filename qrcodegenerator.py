@@ -64,12 +64,12 @@ for i, k in enumerate(qr_codes_chunked):
         #backgr.paste(im1,(int((j*199.86+41)*cf),int((4*204.22+53.73)*cf)))
         # IF statement used to avoid generating a QR code of value "" for blank inputs
         if qrcode:
-            backgr.paste(im1,(int((j*1.958+0.5*1.248)*x/8.5),int((5/8*1.1628)*y/11)))
-            backgr.paste(im1,(int((j*1.958+0.5*1.248)*x/8.5),int((1*(1.5+8.3/16)+5/8*1.1628)*y/11)))
-            backgr.paste(im1,(int((j*1.958+0.5*1.248)*x/8.5),int((2*(1.5+8.3/16)+5/8*1.1628)*y/11)))
-            backgr.paste(im1,(int((j*1.958+0.5*1.248)*x/8.5),int((3*(1.5+8.3/16)+5/8*1.1628)*y/11)))
-            backgr.paste(im1,(int((j*1.958+0.5*1.248)*x/8.5),int((4*(1.5+8.3/16)+5/8*1.1628)*y/11)))
-
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4.2/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((1*(1.565+9/16)+4.2/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((2*(1.565+9/16)+4.2/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((3*(1.565+9/16)+4.2/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4*(1.565+9/16)+4.2/8)*y/11)))
+            
         # initialize draw text 
         draw = ImageDraw.Draw(backgr)
         # add text headers at specific locations
