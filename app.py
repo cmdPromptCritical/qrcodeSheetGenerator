@@ -6,6 +6,7 @@ from PySide6.QtCore import Qt
 import qrcode
 from io import BytesIO
 from PIL import Image
+import time
 
 class QRCodeGenerator(QWidget):
     def __init__(self):
@@ -107,8 +108,11 @@ class QRCodeGenerator(QWidget):
             msg_box.exec()
 
             # open image in default photo viewer
-            image = Image.open('QR_CODES_PRINT_ME_0.png')
-            image.show()
+            #time.sleep(1)
+            #image = Image.open('QR_CODES_PRINT_ME_0.png')
+            #time.sleep(1)
+            #image.show()
+            subprocess.Popen(['explorer', 'C:\QR_CODE_PRINTER'])
 
         except Exception as e:
             print(f"Error launching external Python script: {e}")
