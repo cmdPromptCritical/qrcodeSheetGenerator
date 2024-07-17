@@ -64,12 +64,12 @@ for i, k in enumerate(qr_codes_chunked):
         #backgr.paste(im1,(int((j*199.86+41)*cf),int((4*204.22+53.73)*cf)))
         # IF statement used to avoid generating a QR code of value "" for blank inputs
         if qrcode:
-            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4.2/8)*y/11)))
-            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((1*(1.565+9/16)+4.2/8)*y/11)))
-            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((2*(1.565+9/16)+4.2/8)*y/11)))
-            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((3*(1.565+9/16)+4.2/8)*y/11)))
-            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4*(1.565+9/16)+4.2/8)*y/11)))
-
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4.8/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((1*(1.565+9/16)+4.8/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((2*(1.565+9/16)+4.8/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((3*(1.565+9/16)+4.8/8)*y/11)))
+            backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4*(1.565+9/16)+4.8/8)*y/11)))
+            
         # initialize draw text 
         draw = ImageDraw.Draw(backgr)
 
@@ -81,11 +81,10 @@ for i, k in enumerate(qr_codes_chunked):
         draw.text(((j*199.86+141)*cf, 30*cf), f'{qrcode}', fill='black', font=font)
 
         # draw instructions at bottom of page
-        draw.text(((141)*cf, 3150), f'open up image and hit CTRL+P to print', fill='black', font=font)
+        draw.text(((141)*cf, 3160), f'open up image and hit CTRL+P to print', fill='black', font=font)
 
 
 
     backgr.save(f'QR_CODES_PRINT_ME_{i}.png')
     #backgr.show()
 print('done')
-
