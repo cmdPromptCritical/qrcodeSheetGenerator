@@ -69,9 +69,13 @@ for i, k in enumerate(qr_codes_chunked):
             backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((2*(1.565+9/16)+4.2/8)*y/11)))
             backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((3*(1.565+9/16)+4.2/8)*y/11)))
             backgr.paste(im1,(int((j*2.08+0.41)*x/8.5),int((4*(1.565+9/16)+4.2/8)*y/11)))
-            
+
         # initialize draw text 
         draw = ImageDraw.Draw(backgr)
+
+        # draw line separator between each qr code set
+        draw.line([((j*200+20)*cf,0), ((j*200+20)*cf,y)], width=4, fill='black')
+
         # add text headers at specific locations
         font = ImageFont.truetype('Arial.ttf', 32)
         draw.text(((j*199.86+141)*cf, 30*cf), f'{qrcode}', fill='black', font=font)
